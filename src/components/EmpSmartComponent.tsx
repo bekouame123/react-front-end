@@ -46,6 +46,7 @@ const EmpSmartComponent: React.FC<Props> = (props) => {
 
 
         </form>
+
         <Button
         
                 style={{ margin: "1mm" }}
@@ -61,11 +62,12 @@ const EmpSmartComponent: React.FC<Props> = (props) => {
                 if (result === 201) {
                     let apiEmp: Emp[] = await getAllEmps(props.user);
                     setEmp(apiEmp);
-                    return ""
+                    return Emp
                 }
             }}>
             Add
         </Button>
+       
         <br></br>
         <br></br>
 

@@ -1,11 +1,13 @@
 import React from "react";
 import Emp from "../models/Emp";
+import Table from 'react-bootstrap/Table';
+
 
 type Props = {emps:Emp[]}
 
 const EmpDumbComponent:React.FC<Props> = (props)=>{
 
-    return(<table className="table">
+    return(<Table responsive variant="dark">
         <thead>
             <tr>
                 <th>Id</th>
@@ -28,7 +30,7 @@ const EmpDumbComponent:React.FC<Props> = (props)=>{
                 </tr>)
             })}
         </tbody>
-    </table>);
+    </Table>);
 } 
 
 export default EmpDumbComponent;
