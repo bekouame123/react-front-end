@@ -13,6 +13,7 @@ export const getAllEmps = async(user:User):Promise<Emp[]>=>{
         return response.data;
     }else{
         console.log(response); //for debugging
+        console.warn("pas possible");
         return [];
     }
 }

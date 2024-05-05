@@ -15,6 +15,8 @@ const EmpDumbComponent:React.FC<Props> = (props)=>{
                 <th>LAST NAME</th>
                 <th>SOCIAL SECURITY</th>
                 <th>EMPLOYEE ID</th>
+                <th>DEPARTMENT ID</th>
+                <th>DEPARTMENT NAME</th>
 
             </tr>
         </thead>
@@ -26,6 +28,10 @@ const EmpDumbComponent:React.FC<Props> = (props)=>{
                     <td>{emp.lastName}</td>
                     <td>{emp.socialSC}</td>
                     <td>{emp.enrollerId}</td>
+                    <td>{emp.department.id}</td>
+                    <td>{emp.department.dpartName}</td>
+
+
 
                 </tr>)
             })}

@@ -1,10 +1,14 @@
-export default class Emp{
-    constructor(
+import { Department } from "./Depart"
+
+export default interface Emp{
+  
     
-        public id?:number,
-        public firstName?:string,
-        public lastName?:string,
-        public socialSC?:string,
-        public enrollerId?:number
-    ){}
+         id?:number,
+         firstName?:string,
+         lastName?:string,
+         socialSC?:string,
+         enrollerId?:number,
+         department: Department
+
+
 }
