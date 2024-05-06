@@ -19,20 +19,19 @@ const LoginComponent: React.FC = () => {
             label="USER NAME "
             className="mb-3"
         >
-            <Form.Control type="text" placeholder="username" onChange={(e) => {
-                setUserName(e.target.value);
-            }} />
+            <Form.Control type="text" style={{ width: "30em" }}
+                placeholder="username" onChange={(e) => {
+                    setUserName(e.target.value);
+
+                }} />
         </FloatingLabel>
-        <FloatingLabel controlId="floatingPassword" label="Password">
+        <FloatingLabel controlId="floatingPassword" style={{ width: "30em" }} label="Password">
             <Form.Control type="password" placeholder="Password" onChange={(e) => {
                 setPassword(e.target.value);
             }} />
         </FloatingLabel>
-
-
-        {/* <input style={{margin:"1mm"}} type='text' placeholder='username' ></input>
-        <input style={{margin:"1mm"}} type='text'  placeholder='password' ></input> */}
-        <button onClick={async () => {
+    
+        <button style={{margin:"1mm"}} onClick={async () => {
             let inputUser: User = new User(username, "", password);
             let result: Emp[] = await getAllEmps(inputUser);
             //This doesn't work if there are no cars in the db. 

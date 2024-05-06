@@ -7,16 +7,21 @@ type Props = {emps:Emp[]}
 
 const EmpDumbComponent:React.FC<Props> = (props)=>{
 
+    
+
     return(<Table responsive variant="dark">
-        <thead>
+        <thead >
             <tr>
-                <th>Id</th>
-                <th>FIRST NAME</th>
-                <th>LAST NAME</th>
-                <th>SOCIAL SECURITY</th>
-                <th>EMPLOYEE ID</th>
-                <th>DEPARTMENT ID</th>
-                <th>DEPARTMENT NAME</th>
+                <th style={{color:"yellowgreen"}}>Id</th>
+                <th style={{color:"yellowgreen"}}>FIRST NAME</th>
+                <th style={{color:"yellowgreen"}}>LAST NAME</th>
+                <th style={{color:"yellowgreen"}}>SOCIAL SECURITY</th>
+                <th style={{color:"yellowgreen"}}>EMPLOYEE ID</th>
+                <th style={{color:"yellowgreen"}}>DEPARTMENT ID</th>
+                <th style={{color:"yellowgreen"}}>DEPARTMENT NAME</th>
+                <th style={{color:"yellowgreen"}}>JOB TITLE</th>
+                <th style={{color:"yellowgreen"}}>JOB STATUS</th>
+
 
             </tr>
         </thead>
@@ -30,9 +35,8 @@ const EmpDumbComponent:React.FC<Props> = (props)=>{
                     <td>{emp.enrollerId}</td>
                     <td>{emp.department.id}</td>
                     <td>{emp.department.dpartName}</td>
-
-
-
+                    <td>{emp.department.jobTile}</td>
+                    <td>{emp.department.jobStatus}</td>
                 </tr>)
             })}
         </tbody>

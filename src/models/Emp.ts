@@ -9,6 +9,7 @@ export default interface Emp{
          socialSC?:string,
          enrollerId?:number,
          department: Department
+         
 
 
 }

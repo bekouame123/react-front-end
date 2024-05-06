@@ -31,3 +31,5 @@ export const addEmp = async(emp:Emp, user:User):Promise<number>=>{
     }
     return response.status;
 }
+
+export default addEmp
