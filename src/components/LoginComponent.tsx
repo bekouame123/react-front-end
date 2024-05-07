@@ -12,7 +12,7 @@ const LoginComponent: React.FC = () => {
     const [password, setPassword] = useState("");
     const [user, setUser] = useState(new User("", "NONE"));
 
-    return (<div style={{ margin: "1mm" }}>
+    return (<div style={{ padding: "5mm" }}>
 
         <FloatingLabel
             controlId="floatingInput"
