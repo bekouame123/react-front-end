@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import User from '../models/User';
-import { getAllEmps } from '../remote/EmpAPI';
-import Emp from '../models/Emp';
+import { getAllMenus } from '../remote/MenuAPI';
+import Menu from '../models/Menu';
 import AppRoutes from '../routes/AppRoutes';
 
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
@@ -33,7 +33,7 @@ const LoginComponent: React.FC = () => {
     
         <button style={{margin:"1mm"}} onClick={async () => {
             let inputUser: User = new User(username, "", password);
-            let result: Emp[] = await getAllEmps(inputUser);
+            let result: Menu[] = await getAllMenus(inputUser);
             //This doesn't work if there are no cars in the db. 
             if (result.length) {
                 setUser(inputUser);

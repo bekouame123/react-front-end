@@ -7,7 +7,7 @@ const NavBar: React.FC<unknown> = (props) => {
   return (
     <nav className="navbar navbar-expand-lg">
       <Button style={{ margin: "1mm" }}>
-        <Link to={"/emp"} style={{color:"white"}}>REFRESH</Link>
+        <Link to={"/all"} style={{color:"white"}}>REFRESH</Link>
       </Button>
     </nav>
   );

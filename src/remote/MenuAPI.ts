@@ -1,10 +1,11 @@
-import Emp from "../models/Emp";
+import Menu from "../models/Menu";
 import User from "../models/User";
-import EmpClient from "./EmpClient"
+import MenuClient from "./MenuClient";
 
-export const getAllEmps = async(user:User):Promise<Emp[]>=>{
-    const response = await EmpClient
-        .get<Emp[]>("/emp",{
+
+export const getAllMenus = async(user:User):Promise<Menu[]>=>{
+    const response = await MenuClient
+        .get<Menu[]>("/all",{
             //basic auth
             auth:{username:user.userName, 
                 password:user.password?user.password:""}
@@ -18,9 +19,9 @@ export const getAllEmps = async(user:User):Promise<Emp[]>=>{
     }
 }
 
-export const addEmp = async(emp:Emp, user:User):Promise<number>=>{
-    let response = await EmpClient
-        .post("/add/emp", emp, {
+export const addMenu = async(menu:Menu, user:User):Promise<number>=>{
+    let response = await MenuClient
+        .post("/add", menu, {
         auth:{username:user.userName, 
             password:user.password?user.password:""}
 });
@@ -32,4 +33,3 @@ export const addEmp = async(emp:Emp, user:User):Promise<number>=>{
     return response.status;
 }
 
-export default addEmp

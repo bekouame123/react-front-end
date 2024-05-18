@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import EmpSmartComponent from "../components/EmpSmartComponent";
 import User from "../models/User";
+import MenuSmartComponent from "../components/MenuSmartComponent";
 
 type Props = {user:User}
 
 const AppRoutes:React.FC<Props> = (props)=>{
     return(<Routes>     
-        <Route path="/emp" element={<EmpSmartComponent user={props.user}/>} />
+        <Route path="/all" element={<MenuSmartComponent user={props.user}/>} />
 
     </Routes>);
 }
